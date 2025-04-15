@@ -11,35 +11,35 @@ Este projeto tem como objetivo criar um contexto de dados unificado entre Jira e
 A arquitetura do sistema é composta por três componentes principais:
 
 ```
-┌─────────────┐      ┌──────────────────┐      ┌─────────────────┐
-│             │      │                  │      │                 │
-│    CLI      │◄────►│  MCP Server 1    │◄────►│    Jira API     │
-│  (Python)   │      │  (Jira Connector)│      │                 │
-│             │      │                  │      │                 │
-└─────────────┘      └──────────────────┘      └─────────────────┘
+┌─────────────┐      ┌──────────────────────────────┐      ┌─────────────────┐
+│             │      │                              │      │                 │
+│    CLI      │◄────►│  MCP Server 1 (LlamaIndex)   │◄────►│    Jira API     │
+│  (Python)   │      │  (Jira Connector)            │      │                 │
+│             │      │                              │      │                 │
+└─────────────┘      └──────────────────────────────┘      └─────────────────┘
        ▲                                                
        │                                                
        ▼                                                
-┌─────────────┐      ┌──────────────────┐      ┌─────────────────┐
-│   LlamaIndex │      │  MCP Server 2    │      │                 │
-│  (RAG Engine)│◄────►│ (GitHub Connector)│◄────►│   GitHub API    │
-│             │      │                  │      │                 │
-└─────────────┘      └──────────────────┘      └─────────────────┘
+       │             ┌──────────────────────────────┐      ┌─────────────────┐
+       │             │                              │      │                 │
+       └────────────►│  MCP Server 2 (LlamaIndex)   │◄────►│   GitHub API    │
+                     │  (GitHub Connector)          │      │                 │
+                     │                              │      │                 │
+                     └──────────────────────────────┘      └─────────────────┘
 ```
 
 ### Componentes:
 
 * **CLI**: Interface de linha de comando que oferece um prompt interativo para os usuários realizarem consultas.
-* **MCP Server 1**: Conector de dados do Jira, responsável por extrair e processar informações da API do Jira.
-* **MCP Server 2**: Conector de dados do GitHub, responsável por extrair e processar informações da API do GitHub.
-* **LlamaIndex**: Framework para processamento de dados e geração de respostas utilizando técnicas de RAG (Retrieval-Augmented Generation).
+* **MCP Server 1 (LlamaIndex)**: Conector de dados do Jira, implementado com LlamaIndex, responsável por extrair e processar informações da API do Jira.
+* **MCP Server 2 (LlamaIndex)**: Conector de dados do GitHub, implementado com LlamaIndex, responsável por extrair e processar informações da API do GitHub.
 
 ## 🚀 Implementação
 
 ### Tecnologias Utilizadas
 
 * **Python**: Linguagem principal de desenvolvimento.
-* **LlamaIndex**: Framework para indexação e consulta de dados em aplicações GenAI.
+* **LlamaIndex**: Framework para implementação dos conectores MCP, indexação e consulta de dados em aplicações GenAI.
 * **MCP Server GitHub**: Implementação oficial do GitHub para o protocolo MCP ([github/github-mcp-server](https://github.com/github/github-mcp-server)).
 * **MCP Server Jira**: Implementação do protocolo MCP para Jira ([sooperset/mcp-atlassian](https://github.com/sooperset/mcp-atlassian)).
 
