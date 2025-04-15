@@ -1,0 +1,1 @@
+"""Utilitários compartilhados para os conectores MCP."""

@@ -1,0 +1,10 @@
+# Dependências gerais
+python-dotenv>=1.0.0
+typer>=0.9.0
+rich>=13.5.0
+tqdm>=4.66.0
+requests>=2.31.0
+
+# Dependências do MCP Server 1 (Jira Connector)
+llamaindex>=0.10.0
+jira>=3.5.0

@@ -1,0 +1,1 @@
+"""Pacote CLI para a aplicação GenAI App Jira GitHub."""

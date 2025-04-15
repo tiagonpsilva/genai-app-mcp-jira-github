@@ -1,0 +1,1 @@
+"""Conector MCP para Jira."""

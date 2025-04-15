@@ -1,0 +1,41 @@
+# Ambiente virtual
+venv/
+env/
+.env
+
+# Arquivos Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Logs e dados
+*.log
+*.sqlite
+*.db
+data/
+logs/
+
+# Notebooks Jupyter
+.ipynb_checkpoints
+
+# Outros
+.DS_Store
+.idea/
+.vscode/
