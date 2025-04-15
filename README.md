@@ -1,4 +1,4 @@
-# GenAI App - Integração Jira e GitHub
+# GenAI App - Integração Jira e GitHub via MCP
 
 Aplicação de IA Generativa que conecta dados do Jira e GitHub para apoiar processos de engenharia de software.
 
